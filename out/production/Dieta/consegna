@@ -1,0 +1,16 @@
+Compito delle vacanze: svolgere il seguente esercizio... magari con dentro la grafica.... DIETAUn piatto è caratterizzato da un nome, da informazioni nutrizionali, e da un tipo.
+I tipi di piatti possibili sono primo, secondo, contorno e frutta. Le informazioni nutrizionali di interesse sono relative alla quantità di grassi, di proteine e di carboidrati presenti (memorizzate come float). Un pasto si compone di più piatti, in particolare ci può essere al più un piatto per ogni tipo, mentre alcuni tipi di piatti possono essere assenti (in un pasto potrebbero essere presenti il primo, il contorno e la frutta, mentre il secondo potrebbe non essere presente).
+Tipo può essere realizzato come un tipo enumerazione. Scrivere le classi InfoNutriz, Piatto, e Pasto in modo che siano dotate almeno dei seguenti metodi e/o costruttori.
+Classe InfoNutriz:
+• InfoNutriz(float c, float g, float p): crea un oggetto in cui le quantità di carboidrati, grassi e proteine sono pari rispettivamente a c, g, p.
+Classe Piatto:
+• Piatto(String n, Tipo t, InfoNutriz i): crea un piatto avente nome n, tipo t, e informazioni nutrizionali pari a i
+Classe Pasto:
+• boolean aggiungi(Piatto p): se possibile aggiunge il piatto p al pasto. Restituisce il valore true se il piatto viene aggiunto (non era stato aggiunto un
+piatto dello stesso tipo in precedenza), false altrimenti.
+• InfoNutriz getInfo(): restituisce una istanza di InfoNutriz relativa all’intero pasto.
+• boolean equilibrato(): restituisce il valore true se il pasto contiene sia la frutta che il contorno ed almeno uno tra il primo ed il secondo.
+• void stampa(): stampa a video il nome di tutti i piatti, il loro tipo, e le informazioni nutrizionali associate ad ognuno di essi.
+Scrivere infine un programma principale di prova in cui viene creato un pasto contenente alcuni piatti, quindi vengono stampate le sue caratteristiche.
+Suggerimenti:
+Dato un tipo enumerazione, ad ogni enumeratore è associato un valore intero che per default vale 0 per il primo enumeratore, 1 per il secondo e così via. Tale valore può essere ottenuto invocando il metodo int ordinal() sull’enumeratore.
